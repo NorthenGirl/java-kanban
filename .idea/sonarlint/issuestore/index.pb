@@ -132,3 +132,9 @@ N
 .idea/libraries/gson_2_9_0.xml,0\2\029650b3282cd1f60425c91dfbca85f872d242c9
 B
 lib/gson_2_9_0.xml,c\a\ca59665909d166dcb55441fe6f57c2823ed99831
+M
+m1-t25-api/src/Practicum.java,d\9\d922ee3d0a0bb7a77c6c9b25bcea117e3e576773
+E
+m1-t25-api/.gitignore,5\6\560a0c7577700fd5febd5ad1a721fc2268abe386
+D
+m1-t25-api/README.md,4\1\41193da924d5898e337b6d9a35e9807478fcb1c4
