@@ -18,6 +18,7 @@ public interface TaskManager {
     List<Task> getHistory();
 
     void createTask(Task task);
+
     Task getTaskById(int id);
 
     Task findTask(Task task);
