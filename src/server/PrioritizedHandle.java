@@ -27,7 +27,6 @@ public class PrioritizedHandle implements HttpHandler {
             switch (method) {
                 case "GET": {
                     if (Pattern.matches("^/prioritized$", path)) {
-                        Object ObjectMapper;
                         String response = gson.toJson(taskManager.getPrioritizedTasks());
                         sendText(httpExchange, response);
                         break;
