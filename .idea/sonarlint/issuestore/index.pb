@@ -128,3 +128,7 @@ Q
 !src/server/PrioritizedHandle.java,8\e\8e6e538b4cd31cfab1f1e35a542492ce24779840
 V
 &test/server/PrioritizedServerTest.java,d\5\d52dd68f4f2be26b4fe2c0af17a9d39507c6c122
+N
+.idea/libraries/gson_2_9_0.xml,0\2\029650b3282cd1f60425c91dfbca85f872d242c9
+B
+lib/gson_2_9_0.xml,c\a\ca59665909d166dcb55441fe6f57c2823ed99831
