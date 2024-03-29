@@ -7,7 +7,6 @@ import managers.TaskManager;
 import tasks.Task;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.regex.Pattern;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -113,7 +112,6 @@ public class TasksHandle implements HttpHandler {
                     httpExchange.sendResponseHeaders(405, 0);
                 }
             }
-
         } catch (Exception exception) {
             exception.printStackTrace();
 

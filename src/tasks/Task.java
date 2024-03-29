@@ -2,7 +2,6 @@ package tasks;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Task {
@@ -12,8 +11,6 @@ public class Task {
     protected int id;
     protected Duration duration;
     protected LocalDateTime startTime;
-
-    //private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy|HH:mm");
 
     public Task(String name, String description) {
         this.name = name;

@@ -50,10 +50,6 @@ public class InMemoryTaskManager implements TaskManager {
     public TreeSet<Task> getPrioritizedTasks() {
         return prioritizedTasks;
     }
-    /*public List<Task> getPrioritizedTasks() {
-        return new ArrayList<>(prioritizedTasks.stream().collect(Collectors.toList()));
-    }*/
-
 
     private boolean isIntersectsTasks(Task task) {
         if (getPrioritizedTasks().isEmpty()) {
