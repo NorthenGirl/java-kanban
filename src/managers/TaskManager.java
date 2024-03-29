@@ -18,6 +18,7 @@ public interface TaskManager {
     List<Task> getHistory();
 
     void createTask(Task task);
+    Task getTaskById(int id);
 
     Task findTask(Task task);
 
@@ -29,6 +30,8 @@ public interface TaskManager {
 
     void createEpic(Epic epic);
 
+    Epic getEpicById(int id);
+
     Epic findEpic(Epic epic);
 
     void clearEpics();
@@ -38,6 +41,8 @@ public interface TaskManager {
     void updateEpic(Epic epic);
 
     void createSubtasks(Subtask subtask);
+
+    Subtask getSubtaskById(int id);
 
     Subtask findSubtask(Subtask subtask);
 

@@ -1,3 +1,6 @@
 
 m
-java:S12067"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8‹È°ÛÑ1
+java:S1206\"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8†øÍè1
+X	java:S125"<This block of commented-out lines of code should be removed.(à×ê¿8‘øÍè1
+\
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8âË‘Íè1

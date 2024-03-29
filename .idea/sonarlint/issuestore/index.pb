@@ -96,3 +96,35 @@ V
 ,test/managers/FileBackedTaskManagerTest.java,6\0\60bfb74e197e3b93f9d559fec48a9a31c3186161
 R
 "test/managers/TaskManagerTest.java,d\8\d8a326f252287bc9b82feb6f613bf527a72216d7
+O
+src/server/DurationAdapter.java,0\6\06c9367e25635e6f0d0b240d2842e457a3034e95
+T
+$src/server/LocalDateTimeAdapter.java,0\5\051003d6e7db9c9613c4775a7beb3ac2bcfcc1a9
+N
+src/server/HttpTaskServer.java,5\d\5da536c50dbf37b3b318e55abab2c3b6fb8a98fc
+K
+src/server/TasksHandle.java,e\6\e6d5b915f585d1138829cf74f8042e00f53c9c1e
+S
+#test/server/HttpTaskServerTest.java,6\f\6fa4f651d732f0c1be50ff8866bcb50caaee6b54
+Q
+!src/server/TaskListTypeToken.java,6\d\6dd79dc2174026260f3ea8a24700103e405084de
+K
+src/server/EpicsHandle.java,1\a\1a7e38612473d5617055980e6096eaab428e9ba2
+S
+#test/server/HttpEpicServerTest.java,2\c\2c83920b1b87346ed37f8ae7c5ebd21f215aae26
+O
+test/server/TaskServerTest.java,f\8\f8a98f6f0ee568ab94375fa95308b52aa97114d0
+O
+test/server/EpicServerTest.java,0\6\06ed1ca02b5a30ab3a25c4f90c7de6a710666dea
+N
+src/server/SubtasksHandle.java,b\5\b55699de1b9ccb36d0f008ad9bd5d608856d8ab0
+S
+#test/server/SubtasksServerTest.java,c\3\c3ea42fcd8c03c66c7b4d0f2950db3960a96fe6c
+N
+src/server/HistoryHendler.java,7\d\7dc5c523db8cfabaac4b885a66f5cccaf6ea8784
+R
+"test/server/HistoriServerTest.java,7\4\745eae30a7377764f2c7d7234b3182d1b4b6c6dd
+Q
+!src/server/PrioritizedHandle.java,8\e\8e6e538b4cd31cfab1f1e35a542492ce24779840
+V
+&test/server/PrioritizedServerTest.java,d\5\d52dd68f4f2be26b4fe2c0af17a9d39507c6c122
