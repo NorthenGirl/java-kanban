@@ -48,6 +48,7 @@ public class HistoryHendler implements HttpHandler {
             httpExchange.close();
         }
     }
+
     private void sendText(HttpExchange exchange, String response) throws IOException {
         byte[] resp = response.getBytes(UTF_8);
         exchange.getResponseHeaders().add("Content-Type", "application/json;charset=utf-8");
