@@ -24,27 +24,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class SubtasksServerTest {
-    TaskManager taskManager = Managers.getDefault();
-    private HttpTaskServer taskServer = new HttpTaskServer(taskManager);
-    private final Gson gson = HttpTaskServer.getGson();
-    private Task task;
+public class SubtasksServerTest extends ServerTest {
 
     public SubtasksServerTest() throws IOException {
-    }
-
-
-    @BeforeEach
-    void setUp() throws IOException {
-        taskManager.clearTasks();
-        taskManager.clearSubtasks();
-        taskManager.clearEpics();
-        taskServer.start();
-    }
-
-    @AfterEach
-    void tearDown() {
-        taskServer.stop();
     }
 
     @Test

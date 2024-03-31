@@ -24,8 +24,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class EpicServerTest {
-    TaskManager taskManager = Managers.getDefault();
+public class EpicServerTest extends ServerTest {
+    public EpicServerTest() throws IOException {
+    }
+    /*TaskManager taskManager = Managers.getDefault();
     private HttpTaskServer taskServer = new HttpTaskServer(taskManager);
     private final Gson gson = HttpTaskServer.getGson();
     private Task task;
@@ -44,7 +46,7 @@ public class EpicServerTest {
     @AfterEach
     void tearDown() {
         taskServer.stop();
-    }
+    }*/
 
     @Test
     void getEpics() throws IOException, InterruptedException {

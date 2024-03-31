@@ -10,17 +10,16 @@ import java.net.InetSocketAddress;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-
 public class HttpTaskServer {
      private static final int PORT = 8080;
      private static HttpServer httpServer;
 
      public HttpTaskServer(TaskManager taskManager) throws IOException {
           httpServer = HttpServer.create(new InetSocketAddress("localhost", PORT), 0);
-          httpServer.createContext("/tasks", new TasksHandle(taskManager));
-          httpServer.createContext("/epics", new EpicsHandle(taskManager));
-          httpServer.createContext("/subtasks", new SubtasksHandle(taskManager));
-          httpServer.createContext("/history", new HistoryHendler(taskManager));
+          httpServer.createContext("/tasks", new TasksHandler(taskManager));
+          httpServer.createContext("/epics", new EpicsHandler(taskManager));
+          httpServer.createContext("/subtasks", new SubtasksHandler(taskManager));
+          httpServer.createContext("/history", new HistoryHandler(taskManager));
           httpServer.createContext("/prioritized", new PrioritizedHandle(taskManager));
      }
 

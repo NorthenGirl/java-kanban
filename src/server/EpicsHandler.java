@@ -1,6 +1,5 @@
 package server;
 
-import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import managers.TaskManager;
@@ -11,15 +10,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
+public class EpicsHandler extends TasksHandler implements HttpHandler {
 
-public class EpicsHandle implements HttpHandler {
-    private final TaskManager taskManager;
-    private final Gson gson;
-
-    public EpicsHandle(TaskManager taskManager) {
-        this.taskManager = taskManager;
-        gson = HttpTaskServer.getGson();
+    public EpicsHandler(TaskManager taskManager) {
+        super(taskManager);
     }
 
     @Override
@@ -102,32 +96,11 @@ public class EpicsHandle implements HttpHandler {
                     httpExchange.sendResponseHeaders(405, 0);
                 }
             }
-
         } catch (Exception exception) {
             exception.printStackTrace();
-
         } finally {
             httpExchange.close();
         }
-    }
-
-    private int parsePathId(String path) {
-        try {
-            return Integer.parseInt(path);
-        } catch (NumberFormatException exception) {
-            return -1;
-        }
-    }
-
-    private void sendText(HttpExchange exchange, String response) throws IOException {
-        byte[] resp = response.getBytes(UTF_8);
-        exchange.getResponseHeaders().add("Content-Type", "application/json;charset=utf-8");
-        exchange.sendResponseHeaders(200, resp.length);
-        exchange.getResponseBody().write(resp);
-    }
-
-    private String readText(HttpExchange exchange) throws IOException {
-        return new String(exchange.getRequestBody().readAllBytes(), UTF_8);
     }
 }
 

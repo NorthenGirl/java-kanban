@@ -1,11 +1,6 @@
 package server;
 
-import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import managers.Managers;
-import managers.TaskManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tasks.Epic;
 import tasks.Subtask;
@@ -23,26 +18,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class PrioritizedServerTest {
-    TaskManager taskManager = Managers.getDefault();
-    private HttpTaskServer taskServer = new HttpTaskServer(taskManager);
-    private final Gson gson = HttpTaskServer.getGson();
-    private Task task;
-
+public class PrioritizedServerTest extends ServerTest {
     public PrioritizedServerTest() throws IOException {
-    }
-
-    @BeforeEach
-    void setUp() throws IOException {
-        taskManager.clearTasks();
-        taskManager.clearSubtasks();
-        taskManager.clearEpics();
-        taskServer.start();
-    }
-
-    @AfterEach
-    void tearDown() {
-        taskServer.stop();
     }
 
     @Test

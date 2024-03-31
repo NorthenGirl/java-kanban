@@ -1,6 +1,5 @@
 package server;
 
-import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import managers.TaskManager;
@@ -8,15 +7,10 @@ import managers.TaskManager;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
-public class PrioritizedHandle implements HttpHandler {
-    private final TaskManager taskManager;
-    private final Gson gson;
+public class PrioritizedHandle extends TasksHandler implements HttpHandler {
 
     public PrioritizedHandle(TaskManager taskManager) {
-        this.taskManager = taskManager;
-        gson = HttpTaskServer.getGson();
+        super(taskManager);
     }
 
     @Override
@@ -47,12 +41,5 @@ public class PrioritizedHandle implements HttpHandler {
         } finally {
             httpExchange.close();
         }
-    }
-
-    private void sendText(HttpExchange exchange, String response) throws IOException {
-        byte[] resp = response.getBytes(UTF_8);
-        exchange.getResponseHeaders().add("Content-Type", "application/json;charset=utf-8");
-        exchange.sendResponseHeaders(200, resp.length);
-        exchange.getResponseBody().write(resp);
     }
 }
