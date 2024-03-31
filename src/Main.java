@@ -10,7 +10,7 @@ public class Main {
   TaskManager taskManager = Managers.getDefault();
 
      Task task1 = new Task("Задача 1", "Завести задачу1", "2024-03-16T09:00", 60);
-     Task task2 = new Task("Задача 2", "Завести задачу2", "2024-03-16T09:00", 30);
+     Task task2 = new Task("Задача 2", "Завести задачу2", "2024-03-16T12:00", 30);
         Epic epic3 = new Epic("Эпик 1", "Завести эпик1");
         taskManager.createTask(task1);
         taskManager.createTask(task2);
